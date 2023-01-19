@@ -1,2 +1,2 @@
 jmeno = "Ivona"
-print (f"{jmeno}@czechitas.cz")
+print(f"{jmeno}@czechitas.cz")
