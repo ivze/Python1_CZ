@@ -13,7 +13,7 @@ mnozstvi = int(input("Zadej mnozstvi: "))
 if soucastka not in sklad:
     print(f'{soucastka} neni skladem.')
 
-if soucastka in  sklad.items() <= mnozstvi in sklad:
+if soucastka in  sklad.items() >= mnozstvi in sklad:
     print(f'{soucastka} poptávku lze uspokojit v plné výši')
     sklad.pop(soucastka)
 
