@@ -10,13 +10,12 @@ sklad = {
 soucastka = input("Zadej nazev soucastky: ")
 mnozstvi = int(input("Zadej mnozstvi: "))
 
-if soucastka not in sklad:
-    print(f'{soucastka} neni skladem.')
-
-if soucastka in  sklad.items() >= mnozstvi in sklad:
-    print(f'{soucastka} poptávku lze uspokojit v plné výši')
-    sklad.pop(soucastka)
-
+if soucastka in sklad:
+    if mnozstvi > sklad[soucastka]:
+        print(f'{soucastka} lze prodat pouze omezené množství kusů')
+        sklad.pop(soucastka)
+    else:
+        print(f'poptávku po součástce {soucastka}  lze uspokojit v plné výši')
 else:    
-    soucastka in  sklad.items() < mnozstvi in sklad
-    print(f'{soucastka} lze prodat pouze omezené množství kusů')
+    print(f'{soucastka} neni skladem.')
+    
