@@ -16,6 +16,7 @@ if soucastka in sklad:
         sklad.pop(soucastka)
     else:
         print(f'poptávku po součástce {soucastka}  lze uspokojit v plné výši')
+        sklad[soucastka] -= mnozstvi
 else:    
     print(f'{soucastka} neni skladem.')
     
