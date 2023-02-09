@@ -15,6 +15,6 @@ for zak in body:
 
 
 with open('prospech.json', mode='w', encoding='utf-8') as soubor:
-    json.dump(body, soubor)
+    json.dump(prospech, soubor)
 
 print(prospech)
