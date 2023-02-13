@@ -12,43 +12,27 @@ teploty=[
 
 # # 	1. Vytvoř seznam průměrných teplot pro každý den.
 
-prumer_den = []
-for x in teploty:
-    a = 0
-    b = 0
-    for y in x:     
-        a = a + y
-        b = b + 1
-    prumer_den.append(a/b)
+prumer_den = [sum(teplota)/len(teplota) for teplota in teploty]
 print(prumer_den)
 
 
 # # 	2. Vytvoř seznam ranních teplot.
 
-
-def ranni_teploty(nums, n):
-   result = [i.pop(n) for i in nums]
-   return result 
-n = 0
-print(ranni_teploty(teploty, n))
+ranni_teploty = [column[0] for column in teploty]
+print(ranni_teploty)
 
 
 # # 	3. Vytvoř seznam nočních teplot.
 
-def nocni_teploty(nums, n):
-   result = [i.pop(n) for i in nums]
-   return result 
-n = 2
-print(nocni_teploty(teploty, n))
+nocni_teploty = [column[3] for column in teploty]
+print(nocni_teploty)
 
 
 # # Vytvoř seznam dvouprvkových seznamů obsahujících pouze polední a noční teplotu.
 
+poledni_nocni_teploty = [[column[1], column[3]] for column in teploty]
+print(poledni_nocni_teploty)
 
-x = [row[1] for row in teploty]
-y = [row[3] for row in teploty]
-print(x)
-print(y)
 
 
 
