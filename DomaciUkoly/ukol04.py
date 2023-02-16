@@ -13,7 +13,7 @@ def cena_SMS(s):
     cena_180_znaku = 3
     kolik_znaku = len(s)
     kolik_znaku % 180 != 0
-    cena = kolik_znaku / 180
+    cena = kolik_znaku // 180 + 1
     cena_SMS = int (cena * cena_180_znaku)
     return cena_SMS
 
