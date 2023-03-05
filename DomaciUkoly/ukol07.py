@@ -21,10 +21,10 @@ class Auto:
 Peugeot = Auto("4A2 3020", "Peugeot 403 Cabrio", 47534)
 Skoda = Auto("1P3 4747", "Škoda Octavia", 41253)
 
-print(Peugeot.get_info())
-print(Skoda.get_info())
-print(Peugeot.pujc_auto())
-print(Skoda.pujc_auto())
-print(Peugeot.pujc_auto())
-print(Skoda.pujc_auto())
+vozy = {"Škoda": Skoda, "Peugeot": Peugeot}
+
+jake_auto = input("Jake auto chcete? (k dispozici Peugeot nebo Škoda) ")
+
+print(vozy[jake_auto].get_info())
+print(vozy[jake_auto].pujc_auto())
 
